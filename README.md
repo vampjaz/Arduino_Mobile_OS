@@ -17,9 +17,9 @@ This is a newer but unstable release. It currently does not compile due to a lib
 You will also need to download some libraries to make it work. All functionality depends on an LCD and a 5 way button pad. I used the Adafruit 16x2 I2C LCD shield (http://www.adafruit.com/products/772), but if you use another shield, you will have to modify your program a little. first, change the lcd declarations to engage the LCD as an object called lcd. then replace all instances of lcd.readButtons with a reference to a function that returns a byte containing button data in the form (in binary) 0,0,0,left,up,down,right,select with each being an on or off bit. You will also need to replace all instances of lcd.setBacklight to a function you write that sets the backlight on if the function is sent 0x01 or off is it is sent 0x00.
 
 The button setup i used looks like this:
-      up          select
- left      right
-	 down
+          up          select
+     left      right
+          down
 
 
 
