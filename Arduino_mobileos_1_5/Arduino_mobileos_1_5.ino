@@ -145,7 +145,7 @@ void loop() {
            hesc = true;
           break;
           case 1:
-            serialio = true;
+
             long baudrate;
             byte mbaud;
             mbaud = menu("Baud Rate",serialmenuitems,14);
@@ -180,11 +180,11 @@ void loop() {
               }            
             }
             Serial.end();
-            serialio = false;
+
             wait();
           break;
           case 2:
-            // we will store up to 64 pulse pairs (this is -a lot-)
+          /*  // we will store up to 64 pulse pairs (this is -a lot-)
             int pulses[64][2]; // pair is high and low pulse
             byte currentpulse;
             
@@ -211,7 +211,7 @@ void loop() {
               lowpulse = 0; // start out with no pulse length
               
             // while (digitalRead(IRpin)) { // this is too slow!
-                while (IRpin_PIN & (1 << IRpin)) {
+//                while (IRpin_PIN & (1 << IRpin)) {
                  // pin is still HIGH
              
                  // count off another few microseconds
@@ -282,7 +282,7 @@ void loop() {
               // we read one high-low pulse successfully, continue!
               currentpulse++;
             }
-            }
+            } */
           break;
           case 3:
             byte apin = number("Analog Pin",0,15,3);
